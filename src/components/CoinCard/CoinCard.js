@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 const CoinCard = ({coin}) => {
     return (
-        <div className="shadow-lg rounded-2xl w-[250px] bg-white p-4 m-3">
+        <div className="shadow-lg rounded-2xl w-[250px] border-2 border-pink-500 bg-white p-4 m-3">
 
-            <Link to="/coins">
-            <div className="flex gap-4 justify-between items-center">
+            <Link to={`/coin-details/${coin.id}`}>
+            <div className="flex gap-4 justify-between  items-center">
                <div className=" flex-shrink-0">
                    <img className="mx-auto object-cover rounded-full h-16 w-16" src={coin.image} alt="" />
                </div>
@@ -15,13 +15,7 @@ const CoinCard = ({coin}) => {
                    <span className="text-gray-400 font-medium">{coin.symbol}</span>
                </div>
              </div>
-
-
-
-
             </Link>
-            {/* <p>{coin.id}</p>
-            <p>p> */}
 
         </div>
     );

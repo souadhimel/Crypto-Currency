@@ -12,13 +12,13 @@ const CustomLink = ({to,children,...props}) => {
     return (
         <div>
              <Link
-        style={{ color: match ? "blue" : "black" }}
+        style={{ color: match ? "blue" : "black",padding:"10px", borderBottom: match ? "3px solid red" : "none"}}
+        // margin: '20px',textDecoration: "none",color:"white",fontWeight:"bold",borderBottom: match ? "3px solid red" : "none"
         to={to}
         {...props}
       >
         {children}
       </Link>
-      {/* {match && " (active)"} */}
         </div>
     );
 };
